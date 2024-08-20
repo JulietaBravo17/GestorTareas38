@@ -17,8 +17,10 @@ export const renderTasks = () => {
 
         li.innerHTML = `
             ${task.text}
+            <div class="buttons">
             <button class="delete"> Eliminar </button>
             <button class="toggle"> ${ task.completed === false ? "Completar" : "Deshacer" } </button>
+            </div>        
         `;
 
         taskList.appendChild(li);

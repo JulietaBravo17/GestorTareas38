@@ -1,21 +1,23 @@
 /* Estilos generales */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0%;
-    padding: 0%;
+    color: #2B6956;
+    background: #845ec2 (34,193,195);
+    background: linear-gradient(#F2E0EF,#CAC6DE,#9AAFC9,#6899AC,#3E8285,#2B6956);
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-} 
+}
 
 /* Estilos para el contenedor principal */
 #app {
-    background-color: white;
+    background-color: #6899AC (196, 180, 248);
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Estilos para el formulario */
@@ -36,7 +38,7 @@ input {
 /* Estilos al botón */
 button {
     padding: 5px 8px;
-    background-color: #007bff;
+    background-color: #9AAFC9;
     color: white;
     border: none;
     border-radius: 3px;
@@ -53,6 +55,7 @@ ul {
 li {
     background-color: #f4f4f4;
     padding: 10px;
+    width: 400px;
     border: 1px solido #ddd;
     margin-top: 10px;
     display: flex;
@@ -64,4 +67,66 @@ li {
 li.completed {
     text-decoration: line-through;
     color: #888; 
+}
+
+button {
+    background-color: transparent;
+    color: #9AAFC9;
+    padding: 10px 20px;
+    border: 2px solid #9AAFC9;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.4s;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: #9AAFC9;
+    transition: all 0.4s ease;
+    border-radius: 50%;
+    z-index: 0;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+button:hover {
+    color: white;
+}
+
+button span {
+    position: relative;
+    z-index: 1;
+}
+
+
+button {
+    background: linear-gradient(45deg,#F2E0EF,#3E8285);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(45deg,#CAC6DE,#2B6956);
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
